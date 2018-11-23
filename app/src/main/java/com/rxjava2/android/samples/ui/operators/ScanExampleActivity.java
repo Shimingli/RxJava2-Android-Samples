@@ -38,7 +38,9 @@ public class ScanExampleActivity extends AppCompatActivity {
         });
     }
 
-    /* Using scan operator, it sends also the previous result */
+    /* Using scan operator, it sends also the previous result
+    * 使用扫描算子，它也发送先前的结果。
+    * */
     private void doSomeWork() {
         getObservable()
                 // Run on a background thread
@@ -48,6 +50,8 @@ public class ScanExampleActivity extends AppCompatActivity {
                 .scan(new BiFunction<Integer, Integer, Integer>() {
                     @Override
                     public Integer apply(Integer int1, Integer int2) {
+                        Log.d(TAG, "  int1 : " + int1);
+                        Log.d(TAG, "  int2 : " + int2);
                         return int1 + int2;
                     }
                 })

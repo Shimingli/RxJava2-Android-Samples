@@ -41,12 +41,17 @@ public class ReplayExampleActivity extends AppCompatActivity {
 
     /* Using replay operator, replay ensure that all observers see the same sequence
      * of emitted items, even if they subscribe after the Observable has begun emitting items
+     *
+     * 使用重放操作符，重放确保所有观察者看到相同的序列。
+     *的发射项目，即使它们订阅后，可观测已经开始发射项目
      */
     private void doSomeWork() {
 
         PublishSubject<Integer> source = PublishSubject.create();
-        ConnectableObservable<Integer> connectableObservable = source.replay(3); // bufferSize = 3 to retain 3 values to replay
-        connectableObservable.connect(); // connecting the connectableObservable
+        // 缓冲区大小＝3以保留3个重放值
+        ConnectableObservable<Integer> connectableObservable = source.replay(2); // bufferSize = 3 to retain 3 values to replay 缓冲区大小＝3以保留3个重放值
+         //连接可连接的可观察的
+        connectableObservable.connect(); // connecting the connectable Observable
 
         connectableObservable.subscribe(getFirstObserver());
 
@@ -54,6 +59,9 @@ public class ReplayExampleActivity extends AppCompatActivity {
         source.onNext(2);
         source.onNext(3);
         source.onNext(4);
+        source.onNext(5);
+        source.onNext(6);
+        source.onNext(7);
         source.onComplete();
 
         /*

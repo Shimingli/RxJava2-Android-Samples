@@ -150,30 +150,36 @@ public class OperatorsActivity extends AppCompatActivity {
         startActivity(new Intent(OperatorsActivity.this, FilterExampleActivity.class));
     }
     /**
+     * 使用跳过操作符，它不会发出前2个值。 对前面两个值不会操作
      * @param view
      */
     public void startSkipActivity(View view) {
         startActivity(new Intent(OperatorsActivity.this, SkipExampleActivity.class));
     }
     /**
+     * 使用扫描算子，它也发送先前的结果。 意思就是 我关心每次运算的结果 ，是每次运算的结果
+     * 这个有个关键的地方 subscribe 里面的 观察者 onNext的方法是先行执行的
      * @param view
      */
     public void startScanActivity(View view) {
         startActivity(new Intent(OperatorsActivity.this, ScanExampleActivity.class));
     }
     /**
+     * PublishSubject 我个人理解的话，就是一堆数据我要发送给别人，但是呢最后几个数字我又要发送给其他人，所以就需要使用到这个
      * @param view
      */
     public void startReplayActivity(View view) {
         startActivity(new Intent(OperatorsActivity.this, ReplayExampleActivity.class));
     }
     /**
+     * 依次的发送两个数组，而且里面两个数组的是有序的输出的，所以就要使用到这个里面的
      * @param view
      */
     public void startConcatActivity(View view) {
         startActivity(new Intent(OperatorsActivity.this, ConcatExampleActivity.class));
     }
     /**
+     * 依次的发送两个数组，而且里面两个数组的不是有序的输出的，但是我始终没有测出来结果，哎哎 难受的很  日了狗！
      * @param view
      */
     public void startMergeActivity(View view) {
