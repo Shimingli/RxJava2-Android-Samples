@@ -41,13 +41,14 @@ public class DeferExampleActivity extends AppCompatActivity {
 
     /*
      * Defer used for Deferring Observable code until subscription in RxJava
+     * 推迟在RxJava订阅可观察代码直到订阅
      */
     private void doSomeWork() {
 
         Car car = new Car();
 
         Observable<String> brandDeferObservable = car.brandDeferObservable();
-
+        // 即使我们在创建了可观察的品牌之后设置了品牌，我们也会得到宝马的品牌。如果我们不使用延迟器，我们将没有作为品牌。
         car.setBrand("BMW");  // Even if we are setting the brand after creating Observable
         // we will get the brand as BMW.
         // If we had not used defer, we would have got null as the brand.

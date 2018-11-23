@@ -41,6 +41,7 @@ public class DistinctExampleActivity extends AppCompatActivity {
 
     /*
      * distinct() suppresses duplicate items emitted by the source Observable.
+     * 区别（）抑制由可观察到的源发出的重复项。
      */
     private void doSomeWork() {
 

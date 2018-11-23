@@ -186,29 +186,38 @@ public class OperatorsActivity extends AppCompatActivity {
         startActivity(new Intent(OperatorsActivity.this, MergeExampleActivity.class));
     }
     /**
+     * 即使我们在创建了可观察的品牌之后设置了品牌，我们也会得到宝马的品牌。如果我们不使用延迟器，我们将没有作为品牌。
+     * 说通俗一点就是我们设置一个bean的属性，这个属性能跟着观察者走下去
      * @param view
      */
     public void startDeferActivity(View view) {
         startActivity(new Intent(OperatorsActivity.this, DeferExampleActivity.class));
     }
     /**
+     * 去重，对数据源，进行去重的操作
      * @param view
      */
     public void startDistinctActivity(View view) {
         startActivity(new Intent(OperatorsActivity.this, DistinctExampleActivity.class));
     }
+
+
     /**
+     * 对数据源传递，但是只不过是取最后一个数，把前面的都不需要了
      * @param view
      */
     public void startLastOperatorActivity(View view) {
         startActivity(new Intent(OperatorsActivity.this, LastOperatorExampleActivity.class));
     }
+
     /**
+     * 就是同一个消息队列，直接两个观察者共享这个消息
      * @param view
      */
     public void startReplaySubjectActivity(View view) {
         startActivity(new Intent(OperatorsActivity.this, ReplaySubjectExampleActivity.class));
     }
+
     /**
      * @param view
      */

@@ -41,6 +41,9 @@ public class ReplaySubjectExampleActivity extends AppCompatActivity {
 
     /* ReplaySubject emits to any observer all of the items that were emitted
      * by the source Observable, regardless of when the observer subscribes.
+     *
+     * RePress主题向所有观察者发出所有被发射的项目。
+     *源可观察，不管观察者何时订阅。
      */
     private void doSomeWork() {
 
