@@ -22,12 +22,15 @@ import io.reactivex.schedulers.Schedulers;
 
 /**
  * Created by amitshekhar on 27/08/16.
+ *
+ * disposable :翻译使用后随即抛掉的东西（尤指容器等）
  */
 public class DisposableExampleActivity extends AppCompatActivity {
 
     private static final String TAG = DisposableExampleActivity.class.getSimpleName();
     Button btn;
     TextView textView;
+    //一次性容器，可以容纳多个其他一次性物品，并提供O(1)添加和移除复杂性。
     private final CompositeDisposable disposables = new CompositeDisposable();
 
     @Override
@@ -48,6 +51,7 @@ public class DisposableExampleActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        //在活动被破坏后不要发送事件
         disposables.clear(); // do not send event after activity has been destroyed
     }
 
@@ -90,6 +94,7 @@ public class DisposableExampleActivity extends AppCompatActivity {
             @Override
             public ObservableSource<? extends String> call() {
                 // Do some long running operation
+                // 做一些长时间运行的操作
                 SystemClock.sleep(2000);
                 return Observable.just("one", "two", "three", "four", "five");
             }

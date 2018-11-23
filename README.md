@@ -1,5 +1,4 @@
-<img src=https://raw.githubusercontent.com/amitshekhariitbhu/RxJava2-Android-Samples/master/assets/rxjava2.png >
-
+## [RxJava2-Android-Samples](https://github.com/amitshekhariitbhu/RxJava2-Android-Samples)
 # Learning RxJava 2 for Android by example
 
 [![Mindorks](https://img.shields.io/badge/mindorks-opensource-blue.svg)](https://mindorks.com/open-source-projects)

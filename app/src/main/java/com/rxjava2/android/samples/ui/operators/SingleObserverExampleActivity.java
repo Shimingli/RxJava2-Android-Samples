@@ -40,6 +40,7 @@ public class SingleObserverExampleActivity extends AppCompatActivity {
 
     /*
      * simple example using SingleObserver
+     *使用单观察者的简单例子
      */
     private void doSomeWork() {
         Single.just("Amit")

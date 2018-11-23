@@ -52,6 +52,8 @@ public class IntervalExampleActivity extends AppCompatActivity {
     /*
      * simple example using interval to run task at an interval of 2 sec
      * which start immediately
+     * 使用间隔2秒的间隔运行任务的简单示例
+     *立即开始
      */
     private void doSomeWork() {
         disposables.add(getObservable()

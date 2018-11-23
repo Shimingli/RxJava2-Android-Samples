@@ -42,7 +42,7 @@ public class FilterExampleActivity extends AppCompatActivity {
 
     /*
      * simple example by using filter operator to emit only even value
-     *
+     * 使用过滤器操作符只发出偶数值的简单示例
      */
     private void doSomeWork() {
         Observable.just(1, 2, 3, 4, 5, 6)

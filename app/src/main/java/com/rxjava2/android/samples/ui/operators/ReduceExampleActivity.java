@@ -41,6 +41,8 @@ public class ReduceExampleActivity extends AppCompatActivity {
 
     /*
      * simple example using reduce to add all the number
+     *
+     * 简单的例子，用以减少所有数字的添加
      */
     private void doSomeWork() {
         getObservable()

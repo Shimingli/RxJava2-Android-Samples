@@ -44,6 +44,8 @@ public class TimerExampleActivity extends AppCompatActivity {
 
     /*
      * simple example using timer to do something after 2 second
+     * 简单的例子，使用定时器做某事后2秒
+     * 延迟两秒运行
      */
     private void doSomeWork() {
         getObservable()

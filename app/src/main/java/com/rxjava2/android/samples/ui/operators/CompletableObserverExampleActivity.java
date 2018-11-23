@@ -44,6 +44,7 @@ public class CompletableObserverExampleActivity extends AppCompatActivity {
 
     /*
      * simple example using CompletableObserver
+     * 使用完全观测器的简单示例
      */
     private void doSomeWork() {
         Completable completable = Completable.timer(1000, TimeUnit.MILLISECONDS);

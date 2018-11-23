@@ -41,14 +41,17 @@ public class FlowableExampleActivity extends AppCompatActivity {
 
     /*
      * simple example using Flowable
+     * 使用流动性的简单示例
      */
     private void doSomeWork() {
 
-        Flowable<Integer> observable = Flowable.just(1, 2, 3, 4);
+        Flowable<Integer> observable = Flowable.just(100, 2, 3, 4);
 
-        observable.reduce(50, new BiFunction<Integer, Integer, Integer>() {
+        observable.reduce(50+1, new BiFunction<Integer, Integer, Integer>() {
             @Override
             public Integer apply(Integer t1, Integer t2) {
+                Log.d(TAG, "  t1 : " + t1);
+                Log.d(TAG, "  t2 : " + t2);
                 return t1 + t2;
             }
         }).subscribe(getObserver());

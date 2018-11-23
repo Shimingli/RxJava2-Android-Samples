@@ -42,13 +42,15 @@ public class BufferExampleActivity extends AppCompatActivity {
 
     /*
      * simple example using buffer operator - bundles all emitted values into a list
+     *
+     * 使用缓冲运算符的简单示例-将所有发出的值捆绑到列表中
      */
     private void doSomeWork() {
 
         Observable<List<String>> buffered = getObservable().buffer(3, 1);
 
-        // 3 means,  it takes max of three from its start index and create list
-        // 1 means, it jumps one step every time
+        // 3 means,  从开始索引和创建列表中最多需要三个
+        // 1 means, 每次跳一步
         // so the it gives the following list
         // 1 - one, two, three
         // 2 - two, three, four

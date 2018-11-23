@@ -40,8 +40,8 @@ public class TakeExampleActivity extends AppCompatActivity {
         });
     }
 
-    /* Using take operator, it only emits
-    * required number of values. here only 3 out of 5
+    /*使用取算符，它只发出
+     *所需数量的值。这里只有5个中的3个
     */
     private void doSomeWork() {
         getObservable()
