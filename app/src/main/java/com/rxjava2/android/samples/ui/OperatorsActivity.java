@@ -242,7 +242,7 @@ public class OperatorsActivity extends AppCompatActivity {
     }
 
 
-    /**
+    /** 定时器
      * @param view
      */
     public void startThrottleFirstActivity(View view) {
