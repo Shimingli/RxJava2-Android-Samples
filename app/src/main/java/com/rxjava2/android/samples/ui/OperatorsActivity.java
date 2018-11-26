@@ -218,24 +218,30 @@ public class OperatorsActivity extends AppCompatActivity {
         startActivity(new Intent(OperatorsActivity.this, ReplaySubjectExampleActivity.class));
     }
 
-    /**
+    /** 感觉就是两个订阅者，分开订阅 ，其中一个订阅者只关心一个结果
      * @param view
      */
     public void startPublishSubjectActivity(View view) {
         startActivity(new Intent(OperatorsActivity.this, PublishSubjectExampleActivity.class));
     }
+
     /**
+     * BehaviorSubject 发出一个消息，然后订阅了，另外一个订阅者就会马上走这个结果输出，而且是交替输出的，不是单独输出的
      * @param view
      */
     public void startBehaviorSubjectActivity(View view) {
         startActivity(new Intent(OperatorsActivity.this, BehaviorSubjectExampleActivity.class));
     }
+
     /**
+     * AsyncSubject 就只能观察到最后一个值，另个订阅者 就只能接收到一个值
      * @param view
      */
     public void startAsyncSubjectActivity(View view) {
         startActivity(new Intent(OperatorsActivity.this, AsyncSubjectExampleActivity.class));
     }
+
+
     /**
      * @param view
      */

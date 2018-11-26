@@ -39,12 +39,14 @@ public class BehaviorSubjectExampleActivity extends AppCompatActivity {
         });
     }
 
-    /* When an observer subscribes to a BehaviorSubject, it begins by emitting the item most
-     * recently emitted by the source Observable (or a seed/default value if none has yet been
-     * emitted) and then continues to emit any other items emitted later by the source Observable(s).
-     * It is different from Async Subject as async emits the last value (and only the last value)
-     * but the Behavior Subject emits the last and the subsequent values also.
+    /**
+     * 当观察者订阅行为主体时，它最先发射的是物品。
+     * 最近发出的源可观测（或种子/默认值，如果还没有）
+     * 然后继续发射由源可观测的其他发射的项目。
+     * 它与异步主体不同，因为异步发射最后一个值（并且只有最后一个值）。
+     * 但是行为主体也会发出最后的和后续的值。
      */
+
     private void doSomeWork() {
 
         BehaviorSubject<Integer> source = BehaviorSubject.create();

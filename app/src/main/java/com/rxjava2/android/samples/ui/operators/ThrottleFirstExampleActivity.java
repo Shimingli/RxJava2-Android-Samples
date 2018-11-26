@@ -50,6 +50,10 @@ public class ThrottleFirstExampleActivity extends AppCompatActivity {
     * Using throttleFirst() -> if the source Observable has emitted no items since
     * the last time it was sampled, the Observable that results from this operator
     * will emit no item for that sampling period.
+    *
+    * 使用SuttLeFixStter（）->如果已观察到的源自发布以来没有项目
+     *最后一次采样时，从这个操作符得到的结果是可以观察到的。
+     *将不会为该采样周期发射任何项目。
     */
     private void doSomeWork() {
         getObservable()
@@ -66,6 +70,7 @@ public class ThrottleFirstExampleActivity extends AppCompatActivity {
             @Override
             public void subscribe(ObservableEmitter<Integer> emitter) throws Exception {
                 // send events with simulated time wait
+                // TODO: 2018/11/26 发送模拟时间等待事件
                 Thread.sleep(0);
                 emitter.onNext(1); // deliver
                 emitter.onNext(2); // skip

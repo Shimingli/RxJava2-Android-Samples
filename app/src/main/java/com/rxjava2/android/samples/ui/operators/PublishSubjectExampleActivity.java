@@ -41,8 +41,7 @@ public class PublishSubjectExampleActivity extends AppCompatActivity {
 
     /* PublishSubject emits to an observer only those items that are emitted
      * by the source Observable, subsequent to the time of the subscription.
-     * 发布主题仅向观察者发射那些被发射的项目。
-＊由来源可观察到，在订阅的时间之后。
+     * 发布主题仅向观察者发射那些被发射的项目。由来源可观察到，在订阅的时间之后。
      */
     private void doSomeWork() {
 
@@ -56,6 +55,7 @@ public class PublishSubjectExampleActivity extends AppCompatActivity {
 
         /*
          * it will emit 4 and onComplete for second observer also.
+         * 它将发射4和完成为第二观察员也。
          */
         source.subscribe(getSecondObserver());
 
