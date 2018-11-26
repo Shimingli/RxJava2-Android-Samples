@@ -52,6 +52,9 @@ public class SwitchMapExampleActivity extends AppCompatActivity {
      * and begin only mirroring the current one.
      *
      * Result: 5x
+     *
+     *
+     * 每当源Observable发出一个新项时，它将取消订阅并停止镜像从先前发出的项生成的Observable，并开始只镜像当前项。
      */
     private void doSomeWork() {
         getObservable()

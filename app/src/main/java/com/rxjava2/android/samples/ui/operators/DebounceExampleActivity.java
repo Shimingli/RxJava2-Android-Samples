@@ -49,6 +49,14 @@ public class DebounceExampleActivity extends AppCompatActivity {
     * Using debounce() -> only emit an item from an Observable if a particular time-span has
     * passed without it emitting another item, so it will emit 2, 4, 5 as we have simulated it.
     */
+
+    /**
+     * *使用debounce() ->仅当特定时间跨度具有以下情况时才从可观察对象中发出项
+     * *在没有发射其他项目的情况下通过，因此它将发射2、4、5，就像我们模拟的那样。
+     *
+     * 应用场景举例
+     * 需求：在Edittext上添加监听，当里面输入的内容变化后进行搜索。换句话说就是当用户的输入操作停止几秒钟之后再去搜索。
+     */
     private void doSomeWork() {
         getObservable()
                 .debounce(500, TimeUnit.MILLISECONDS)

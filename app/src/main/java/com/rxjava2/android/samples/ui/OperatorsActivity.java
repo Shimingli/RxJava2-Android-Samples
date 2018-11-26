@@ -244,31 +244,49 @@ public class OperatorsActivity extends AppCompatActivity {
 
     /**
      * 这个牛逼啊，todo 真的牛逼啊，我只去一次的事件，而不是乱取某个时间，和这个时间段内我只去一个事件
-     * throttleFirst  一定时间内取第一次发送的事件。例子：防止按钮的连续点击
+     * throttleFirst  一定时间内取第一次发送的事件。例子：防止按钮的连续点击  开头
      * @param view
      */
     public void startThrottleFirstActivity(View view) {
         startActivity(new Intent(OperatorsActivity.this,ThrottleFirstExampleActivity.class));
     }
+
+
     /**
+     * 这个牛逼啊，todo 真的牛逼啊，我只去一次的事件，而不是乱取某个时间，和这个时间段内我只去一个事件
+     * throttleLast 这个是结尾啊 ，取这段时间的结尾 ，而不是开头的时间
+     * 一定时间内取第一次发送的事件。例子：防止按钮的连续点击  开头
      * @param view
      */
     public void startThrottleLastActivity(View view) {
         startActivity(new Intent(OperatorsActivity.this, ThrottleLastExampleActivity.class));
     }
+
     /**
-     * @param view
+     *  第一个事件1发送出来以后过了400毫秒后发送出了第二个事件，此时不事件1不满足时间的条件被遗弃，然后重新计时；
+     * 2发出后休眠了505毫秒，超过了500毫秒，所以2被发射了出来，被观察者收到；
+     * 3发出来后又过了100毫秒4发出来，所以3被遗弃，从4重新计时，后又过了605毫秒下一个事件才发出，所以4被发射了出来；
+     * 同理，5之后的0.5秒内也没有再发出别的事件，所以最终5也被发射了出来。
+     *
+     * 类似一个弹簧，如果一个事件相当于挤压它一下的话，它回到初始状态需要一段时间，那如果一直有事件不断的挤压它，那它一直回不到初始状态，就一个事件也弹不出来。一旦有一段时间里面没有人挤压它，他就把最后一个弹出来了。周而复始
+     *  TODO 某个事件，消费了 多少秒   达到以后 才能消费这个时间
+     *  @param view
      */
     public void startDebounceActivity(View view) {
         startActivity(new Intent(OperatorsActivity.this, DebounceExampleActivity.class));
     }
+
+
     /**
+     * RxJava的window()函数和buffer()很像，但是它发射的是Observable而不是列表。下图展示了window()如何缓存3个数据项并把它们作为一个新的Observable发射出去。
      * @param view
      */
     public void startWindowActivity(View view) {
         startActivity(new Intent(OperatorsActivity.this,WindowExampleActivity.class));
     }
+
     /**
+     * 使用延迟2秒后发射的简单示例
      * @param view
      */
     public void startDelayActivity(View view) {
