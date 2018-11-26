@@ -71,6 +71,7 @@ public class SearchActivity extends AppCompatActivity {
 
     /**
      * Simulation of network data
+     * 大学网络数据仿真
      */
     private Observable<String> dataFromNetwork(final String query) {
         return Observable.just(true)

@@ -39,6 +39,9 @@ import com.rxjava2.android.samples.ui.operators.ZipExampleActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * Rxjava的 Operators
+ */
 public class OperatorsActivity extends AppCompatActivity {
 
     @Override

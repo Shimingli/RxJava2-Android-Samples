@@ -19,6 +19,8 @@ public class ComposeOperatorExampleActivity extends AppCompatActivity {
 
         /*
             Compose for reusable code.
+
+            编写可重用代码。
          */
         Observable.just(1, 2, 3, 4, 5)
                 .compose(schedulers.<Integer>applyObservableAsync())

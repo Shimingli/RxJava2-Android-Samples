@@ -82,7 +82,9 @@ public class NetworkingActivity extends AppCompatActivity {
                 });
     }
 
-
+    public void zip(View view) {
+        findUsersWhoLovesBoth();
+    }
     /**
      * zip Operator Example
      */
@@ -163,9 +165,7 @@ public class NetworkingActivity extends AppCompatActivity {
     }
 
 
-    public void zip(View view) {
-        findUsersWhoLovesBoth();
-    }
+
 
 
     /**

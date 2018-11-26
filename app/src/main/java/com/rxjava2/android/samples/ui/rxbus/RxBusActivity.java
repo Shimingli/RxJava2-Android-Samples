@@ -25,6 +25,7 @@ public class RxBusActivity extends AppCompatActivity {
     TextView textView;
     Button button;
     private final CompositeDisposable disposables = new CompositeDisposable();
+    private int mI;
 
     @Override
     protected void onDestroy() {
@@ -38,7 +39,7 @@ public class RxBusActivity extends AppCompatActivity {
         setContentView(R.layout.activity_rxbus);
         textView = findViewById(R.id.textView);
         button = findViewById(R.id.button);
-
+        mI = 0;
         disposables.add(((MyApplication) getApplication())
                 .bus()
                 .toObservable()
@@ -50,7 +51,8 @@ public class RxBusActivity extends AppCompatActivity {
                         if (object instanceof Events.AutoEvent) {
                             textView.setText("Auto Event Received");
                         } else if (object instanceof Events.TapEvent) {
-                            textView.setText("Tap Event Received");
+                            mI++;
+                            textView.setText("Tap Event Received" +mI);
                         }
                     }
                 }));

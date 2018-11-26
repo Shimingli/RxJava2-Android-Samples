@@ -33,19 +33,38 @@ public class SelectionActivity extends AppCompatActivity {
         startActivity(new Intent(SelectionActivity.this, NetworkingActivity.class));
     }
 
+
+    /**
+     * 打开RxBus 接受事件----
+     * @param view
+     */
     public void startRxBusActivity(View view) {
+        // 延迟2s 开启一个事件
         ((MyApplication) getApplication()).sendAutoEvent();
         startActivity(new Intent(SelectionActivity.this, RxBusActivity.class));
     }
 
+    /**
+     * 分页   使用 RxJava 去分页
+     * @param view
+     */
     public void startPaginationActivity(View view) {
         startActivity(new Intent(SelectionActivity.this, PaginationActivity.class));
     }
 
+    /**
+     * 编写可重用代码。
+     * @param view
+     */
     public void startComposeOperator(View view) {
         startActivity(new Intent(SelectionActivity.this, ComposeOperatorExampleActivity.class));
     }
 
+
+    /**
+     * 感觉就是 连续的操作符  连续加在一起的效果
+     * @param view
+     */
     public void startSearchActivity(View view) {
         startActivity(new Intent(SelectionActivity.this, SearchActivity.class));
     }
