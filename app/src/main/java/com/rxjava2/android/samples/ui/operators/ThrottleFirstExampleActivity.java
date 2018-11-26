@@ -73,7 +73,7 @@ public class ThrottleFirstExampleActivity extends AppCompatActivity {
                 // TODO: 2018/11/26 发送模拟时间等待事件
                 Thread.sleep(0);
                 emitter.onNext(1); // deliver
-                emitter.onNext(2); // skip
+                emitter.onNext(2); // skip 跳过
                 Thread.sleep(505);
                 emitter.onNext(3); // deliver
                 Thread.sleep(99);

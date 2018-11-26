@@ -242,7 +242,9 @@ public class OperatorsActivity extends AppCompatActivity {
     }
 
 
-    /** 定时器
+    /**
+     * 这个牛逼啊，todo 真的牛逼啊，我只去一次的事件，而不是乱取某个时间，和这个时间段内我只去一个事件
+     * throttleFirst  一定时间内取第一次发送的事件。例子：防止按钮的连续点击
      * @param view
      */
     public void startThrottleFirstActivity(View view) {
