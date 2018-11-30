@@ -44,15 +44,11 @@ public class PublishSubjectExampleActivity extends AppCompatActivity {
      * 发布主题仅向观察者发射那些被发射的项目。由来源可观察到，在订阅的时间之后。
      */
     private void doSomeWork() {
-
         PublishSubject<Integer> source = PublishSubject.create();
-
         source.subscribe(getFirstObserver()); // it will get 1, 2, 3, 4 and onComplete
-
         source.onNext(1);
         source.onNext(2);
         source.onNext(3);
-
         /*
          * it will emit 4 and onComplete for second observer also.
          * 它将发射4和完成为第二观察员也。

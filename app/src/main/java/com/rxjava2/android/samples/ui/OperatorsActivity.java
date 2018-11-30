@@ -83,8 +83,7 @@ public class OperatorsActivity extends AppCompatActivity {
     }
 
     /**
-     * 使用取算符，它只发出
-     * *所需数量的值。这里只有5个中的3个
+     * 使用取算符，它只发出所需数量的值。这里只有5个中的3个
      * @param view
      */
     public void startTakeActivity(View view) {
@@ -221,7 +220,8 @@ public class OperatorsActivity extends AppCompatActivity {
         startActivity(new Intent(OperatorsActivity.this, ReplaySubjectExampleActivity.class));
     }
 
-    /** 感觉就是两个订阅者，分开订阅 ，其中一个订阅者只关心一个结果
+    /**
+     * 感觉就是两个订阅者，分开订阅 ，其中一个订阅者只关心一个结果
      * @param view
      */
     public void startPublishSubjectActivity(View view) {

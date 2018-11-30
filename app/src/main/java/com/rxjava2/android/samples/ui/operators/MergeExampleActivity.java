@@ -39,15 +39,13 @@ public class MergeExampleActivity extends AppCompatActivity {
     }
 
     /*
-     * Using merge operator to combine Observable : merge does not maintain
-     * the order of Observable.
-     * It will emit all the 7 values may not be in order
      * Ex - "A1", "B1", "A2", "A3", "A4", "B2", "B3" - may be anything
      * *使用合并运算符组合可观察性：合并不维护
      *可观察的顺序。
      *将发出的所有7个值可能不按顺序
      *“A1”、“B1”、“A2”、“A3”、“A4”、“B2”、“B3”可能是任何东西。
      */
+    //RxJava 合并组合两个（或多个）Observable数据源
     private void doSomeWork() {
         final String[] aStrings = {"A1", "A2", "A3", "A4","1", "2", "3", "4","5", "6", "7", "8","9", "10", "11", "12",};
         final String[] bStrings = {"B1", "B2", "B3","B1", "B2", "B3","B1", "B2", "B3","B1", "B2", "B3","B1", "B2", "B3","B1", "B2", "B3","B1", "B2", "B3"};

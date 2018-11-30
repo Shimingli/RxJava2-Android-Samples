@@ -38,20 +38,13 @@ public class ConcatExampleActivity extends AppCompatActivity {
         });
     }
 
-    /*
-     * Using concat operator to combine Observable : concat maintain
-     * the order of Observable.
-     * It will emit all the 7 values in order
-     * here - first "A1", "A2", "A3", "A4" and then "B1", "B2", "B3"
-     * first all from the first Observable and then
-     * all from the second Observable all in order
-     *
-*使用CONTAT运算符组合可观察性：CONTAT维护
-*可观察的顺序。
-*将按顺序发射所有7个值
-这里第一个“A1”，“A2”，“A3”，“A4”，然后是“B1”，“B2”，“B3”。
-*首先从第一个观察到然后
-*所有从第二可观察到的所有顺序
+    /**
+     * 使用CONTAT运算符组合可观察性：CONTAT维护
+     * 可观察的顺序。
+     * 将按顺序发射所有7个值
+     * 这里第一个“A1”，“A2”，“A3”，“A4”，然后是“B1”，“B2”，“B3”。
+     * 首先从第一个观察到然后
+     * 所有从第二可观察到的所有顺序
      */
     private void doSomeWork() {
         final String[] aStrings = {"A1", "A2", "A3", "A4"};

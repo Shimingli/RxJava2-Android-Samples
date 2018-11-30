@@ -25,6 +25,7 @@ public class SelectionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_selection);
     }
 
+
     public void startOperatorsActivity(View view) {
         startActivity(new Intent(SelectionActivity.this, OperatorsActivity.class));
     }

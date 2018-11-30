@@ -46,15 +46,11 @@ public class ReplayExampleActivity extends AppCompatActivity {
      *的发射项目，即使它们订阅后，可观测已经开始发射项目
      */
     private void doSomeWork() {
-
         PublishSubject<Integer> source = PublishSubject.create();
-        // 缓冲区大小＝3以保留3个重放值
-        ConnectableObservable<Integer> connectableObservable = source.replay(2); // bufferSize = 3 to retain 3 values to replay 缓冲区大小＝3以保留3个重放值
+        ConnectableObservable<Integer> connectableObservable = source.replay(4);
          //连接可连接的可观察的
-        connectableObservable.connect(); // connecting the connectable Observable
-
+        connectableObservable.connect();
         connectableObservable.subscribe(getFirstObserver());
-
         source.onNext(1);
         source.onNext(2);
         source.onNext(3);
@@ -63,12 +59,7 @@ public class ReplayExampleActivity extends AppCompatActivity {
         source.onNext(6);
         source.onNext(7);
         source.onComplete();
-
-        /*
-         * it will emit 2, 3, 4 as (count = 3), retains the 3 values for replay
-         */
         connectableObservable.subscribe(getSecondObserver());
-
     }
 
 

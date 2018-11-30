@@ -48,11 +48,8 @@ public class AsyncSubjectExampleActivity extends AppCompatActivity {
      *不发出任何值，AsyncSubject也完成而不发出任何值。）
      */
     private void doSomeWork() {
-
         AsyncSubject<Integer> source = AsyncSubject.create();
-
         source.subscribe(getFirstObserver()); // it will emit only 4 and onComplete
-
         source.onNext(1);
         source.onNext(2);
         source.onNext(3);
